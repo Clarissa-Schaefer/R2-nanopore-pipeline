@@ -32,8 +32,8 @@ conda create --name R2-Pipeline-Repeatmasker
 conda activate R2-Pipeline-Repeatmasker
 micromamba install bioconda::repeatmasker --platform osx-64
 ```
-## Download data and create data folder 
-1. Download fastq file `dorado_sup.fastq` available at SRA under BioProject PRJNA1163071. 
+## Download data and create directories
+1. Download FASTQ file `dorado_sup.fastq` available at SRA under BioProject PRJNA1163071. 
 2. Create directory `00-Data`, create subfolders `raw`, `feature_annotated` and `filtered_aligned`
 3. Move `references` directory to `00-Data` and place `dorado_sup.fastq` into `raw`. 
 
