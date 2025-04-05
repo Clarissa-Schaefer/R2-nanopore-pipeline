@@ -70,7 +70,7 @@ snakemake --use-conda
 Open the Jupyter Notebooks and run notebooks 01 through 05 sequentially. All output files and plots will be generated automatically.
 
 ## Demo 
-To test the code, move the sample FASTQ file named `sample_file.fastq` from the `examples` directory to the `raw` directory and rename it to `dorado_sup.fastq`. Then, run Snakemake and execute the Jupyter Notebooks. If you later want to run the pipeline with the full dataset, make sure to delete all generated files and the FASTQ file (note: both FASTQ files currently share the same name). 
+To test the code, move the sample FASTQ file named `sample_file.fastq` from the `examples` directory to the `raw` directory and rename it to `dorado_sup.fastq`. Then, run Snakemake and execute the Jupyter Notebooks. You can expect to see two plots being emitted to your root directory. The entire process should take less than ten minutes. If you later want to run the pipeline with the full dataset, make sure to delete all generated files and the FASTQ file (note: both FASTQ files currently share the same name). 
 
 ## Reproducibility Notes 
 The Snakemake command was tested on a computer running Ubuntu 24.04.1 LTS with the 6.8.0-50-generic kernel, while the rest of the processing pipeline was executed locally on a macOS Sonoma 14.7.4 machine. The file `__env_export.yml` is an export of the environment used during data analysis.
