@@ -97,7 +97,7 @@ rule repeatmasker:
         library="00-Data/references/ref_28s_features.fasta",
         sample="00-Data/samples_filtered/sample-cutadapt_sup-filtered.fasta"
     output:
-        dir="00-Data/repeatmaskered/",
+        dir=directory("00-Data/repeatmaskered/"),
         dummy_out="00-Data/repeatmaskered/sample-cutadapt_sup-filtered.fasta.out",
         dummy_out_xm="00-Data/repeatmaskered/sample-cutadapt_sup-filtered.fasta.out.xm"
     params:

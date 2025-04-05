@@ -33,14 +33,16 @@ conda activate R2-Pipeline-Repeatmasker
 micromamba install bioconda::repeatmasker --platform osx-64
 ```
 ## Download data and create data folder 
-1. Download fastq file accessible on NCBI (accession code see...).
-2. Create Folder `00-Data`, create subfolder `raw`
-3. move `references` folder to `00-Data` and place `dorado_sup.fastq` into `raw`. 
+1. Download fastq file `dorado_sup.fastq` available at SRA under BioProject PRJNA1163071. 
+2. Create directory `00-Data`, create subfolders `raw`, `feature_annotated` and `filtered_aligned`
+3. Move `references` directory to `00-Data` and place `dorado_sup.fastq` into `raw`. 
 
-Your `00-Data` folder should look like this: 
+Your `00-Data` directory should look like this: 
 
 ``` 
 ─ 00-Data
+│   ├── feature_annotated
+│   ├── filtered_aligned
 │   ├── raw
 │   │   └── dorado_sup.fastq
 │   ├── references
@@ -64,11 +66,11 @@ snakemake --use-conda
 ```
 
 **Run ipynb 01 to 05**
-open the jupyter notebooks and run notebook 1 to 5 subsequentially. Output files and plots should be created automatically. 
+
+Open the Jupyter Notebooks and run notebooks 01 through 05 sequentially. All output files and plots will be generated automatically.
 
 ## Demo 
-
+To test the code, move the sample FASTQ file named `sample_file.fastq` from the `examples` directory to the `raw` directory and rename it to `dorado_sup.fastq`. Then, run Snakemake and execute the Jupyter Notebooks. If you later want to run the pipeline with the full dataset, make sure to delete all generated files and the FASTQ file (note: both FASTQ files currently share the same name). 
 
 ## Reproducibility Notes 
-
-The snakemake command was tested on a computer running Ubuntu 24.04.1 LTS, 6.8.0-50-generic kernel. The remaining processing pipeline was executed locally on a machine running macOS Sonoma 14.7.4. The file `__env_export.yml` is an export of our environment used during the data analysis. 
+The Snakemake command was tested on a computer running Ubuntu 24.04.1 LTS with the 6.8.0-50-generic kernel, while the rest of the processing pipeline was executed locally on a macOS Sonoma 14.7.4 machine. The file `__env_export.yml` is an export of the environment used during data analysis.
