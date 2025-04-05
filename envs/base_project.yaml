@@ -1,0 +1,13 @@
+name: R2-Pipeline 
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - python=3.12
+  - snakemake=8.27.1
+  - minimap2=2.28
+  - cutadapt=5.0
+  - seqtk
+  - samtools=1.21

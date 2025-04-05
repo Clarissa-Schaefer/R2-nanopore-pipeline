@@ -51,7 +51,7 @@ rule cutadapt:
     output:
         "00-Data/samples/sample-cutadapt_sup.fastq"
     shell:
-        "cutadapt --trim-n -m 20 -o {output} {input}"
+        "cutadapt --trim-n -q 20 -m 20 -o {output} {input}"
 
 # Run alignment
 rule mm2_map:

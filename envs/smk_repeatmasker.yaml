@@ -1,0 +1,8 @@
+name: R2-Pipeline-Repeatmasker 
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+# Repeatmasker is x64 only, on apple silicon set CONDA_SUBDIR=osx-64
+# dependencies:
+  - repeatmasker=4.1.7-p1
